@@ -16,10 +16,10 @@ export default function Home() {
   ];
 
   const chooseArray = [
-    { icon: "", title: "Secure and Reliable", desc: "We are regulated by FINTRAC and have a segregated account at major Canadian financial institution. With our state-of-the-art currency order management system, you are at a relief by using an extremely secure service." },
-    { icon: "", title: "Responsive Staff", desc: "Our Staff is well trained to handle multiple queries at a time, you will be pleased with our customer management experience, your satisfaction is our top priority." },
-    { icon: "", title: "Fast Service", desc: "We offer same day delivery of funds to your desired destination if booked before bank cut-off.Our instant money transfer service takes less time than you would usually imagine." },
-    { icon: "", title: "Best Rate", desc: "We guarantee to beat your bank’s exchange rate. You can save hundreds to thousands of dollars." },
+    { icon: "", title: "Secure and Reliable", desc: "We are a FINTRAC-regulated company partnered with a leading Canadian payment processor. With our state-of-the-art currency order management system, you can rely on an extremely secure and efficient service that ensures your peace of mind." },
+    { icon: "", title: "Responsive Staff", desc: "Our professional team is highly trained to handle multiple queries efficiently. Whether you need assistance with a transfer or have questions about our services, we prioritize your satisfaction with top-notch customer support." },
+    { icon: "", title: "Fast Service", desc: "Enjoy same-day delivery of funds to your desired destination when booked before the bank cut-off time. Our instant money transfer service is designed for speed and efficiency, ensuring your money moves as quickly as you need it." },
+    { icon: "", title: "Best Rate", desc: "Get the best exchange rates in the market. We guarantee rates better than your bank’s, helping you save hundreds to thousands of dollars on every transaction. Maximize your value with us!" },
   ];
 
   const servicesArray = [
@@ -36,10 +36,10 @@ export default function Home() {
   ];
 
   const TestimonialArray = [
-    { user: { img: Images.user.src, name: "Jonny Smith", job: "Banker" }, desc: "“The bank that has secured quality and dictated taste in the banking sector, I wan to thanks to a brilliant rebranding and unique working methods. From the very first minute Ceve bank made us take a fresh and modern look." },
-    { user: { img: Images.user.src, name: "Victor James", job: "CEO of Solit" }, desc: "“The best innovative and digital bank ,with the best service and staff." },
-    { user: { img: Images.user.src, name: "Jonathon Ronan", job: "Businessman" }, desc: "“Excellent service, perfect and friendly staff in branch. I am very thankful to the Credit Services Depart ment, my loan was granted without any hassle - easy, fast and with quality." },
-    { user: { img: Images.user.src, name: "Johny Lorence", job: "Enterpreuner" }, desc: "“We can confidently state that Ceve bank is one of our most innovative and brave partners." },
+    { user: { img: Images.user.src, name: "Joaquin Valdez"}, desc: "Just went in earlier at this branch. I really had a good deal in exchanging my US dollars to Canadian dollars. I definitely recommend to go here if you want to buy or sell USD. I believe they also have a great deal with buying/selling Euros as well. Thanks to the nice lady for accommodating my request to choose specific denominations that I want in CAD." },
+    { user: { img: Images.user.src, name: "Deli raesi"}, desc: "One of money trust's standout features is its consistently low trading fees, which remain among the most competitive in the industry. This makes it an attractive choice for traders looking to minimize costs without compromising on quality or service" },
+    { user: { img: Images.user.src, name: "Dasha Zukher"}, desc: "Great customer service from the staff, everyone I’ve ever dealt with was very friendly and pleasant to deal with. The money exchange rate was very good as well compared to other companies I’ve used before. I highly recommend Money Trust’s services if you are looking for an overall great experience. 10/10" },
+    { user: { img: Images.user.src, name: "Koray Yilmaz"}, desc: "It's a great experience, while other branches just agreed to send money, I got my job done here in less than 2 minutes, AWESOME." },
   ];
 
   return (
