@@ -53,7 +53,7 @@ export default function Home() {
         <div className="flex-1 lg:w-1/2">
           <h1 className="text-xl font-bold  md:text-4xl">
             Popular Countries Our Customers Send Money
-          </h1>
+          </h1><br>
           <p className="md:text-xl opacity-80">Our customers trust us to transfer money quickly and securely to their loved ones and businesses in top destinations worldwide, including Hong Kong, Canada, China, and the USA. No matter where you're sending money, we’ve got you covered.</p>
         </div>
         <div className="flex-1 lg:w-1/2">
