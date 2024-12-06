@@ -30,7 +30,7 @@ const page = () => {
                             <MdOutlineMailOutline />
                             <h3 className="font-semibold text-lg">Email</h3>
                             <p className="text-gray-600">Our friendly team is here to help.</p>
-                            <a href="mailto:hi@nurona.com" className="font-semibold">hi@nurona.com</a>
+                            <a href="mailto:info@moneytrust.ca" className="font-semibold">info@moneytrust.ca</a>
                         </div>
 
                         <div className="self-start flex flex-col gap-3">
@@ -43,18 +43,18 @@ const page = () => {
                         <div className="self-start flex flex-col gap-3">
                             <GrLocation />
                             <h3 className="font-semibold text-lg">Office</h3>
-                            <p className="text-gray-600">Come say hello at our office HQ.</p>
+                            <p className="text-gray-600">Come say hello at our Toronto office HQ.</p>
                             <address className="font-semibold ">
-                                100 Smith Street,<br />
-                                Collingwood VIC 3066 AU
+                                Dynasty Court, 5460 Yonge St Shop 105,<br />
+                                North York, ON M2N 6K7
                             </address>
                         </div>
 
                         <div className="self-start flex flex-col gap-3">
                             <LuPhone />
                             <h3 className="font-semibold text-lg">Phone</h3>
-                            <p className="text-gray-600">Mon-Fri from 8am to 5pm.</p>
-                            <a href="tel:+1555000000" className="font-semibold ">+1 (555) 000-0000</a>
+                            <p className="text-gray-600">Mon-Sat from 10am to 6pm.</p>
+                            <a href="tel:+1555000000" className="font-semibold ">+1 (416) 567-2222</a>
                         </div>
                         <div className='col-span-2'>
                             <Location />
