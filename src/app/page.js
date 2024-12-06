@@ -120,7 +120,7 @@ export default function Home() {
               <p className="text-[#94C99D] sm:hidden text-lg">Core Services</p>
               Our Services At A Glance</h1>
             <div className="flex justify-end flex-col items-end gap-2">
-              <p className="sm:text-end text-start max-w-[500px]">Quickly and easily send, receive and request money online with Money Trust.</p>
+              <p className="sm:text-end text-start max-w-[500px]">Effortlessly send, receive, and manage your money transfers with confidence using Money Trust's reliable and secure services.</p>
               <button className="bg-[#94C99D] text-white hidden md:flex justify-center items-center md:gap-3 gap-2 whitespace-nowrap text-sm md:text-lg md:px-6 px-3 py-3 rounded-full">View More
                 <img src={Images.plus.src} className="h-5" alt="ico" />
               </button>
@@ -169,22 +169,11 @@ export default function Home() {
           <img src={Images.highlights.src} alt="" className="md:block hidden max-h-[800px] h-full" />
           <div className="flex flex-col justify-between">
             <h1 className="px-5 md:px-0 md:text-4xl text-xl font-bold pb-5">Highlights Of Our Services</h1>
-            <p className="px-5 md:px-0 text-lg">This summer camp is designed for international students aged 10-18 with an
-              interest in AI and entrepreneurship. Participants should be eager to engage in
-              hands-on activities in Singapore and explore how AI applies to business
-              innovation.</p>
-            <div className="pt-8 ">
-              <div className="flex px-5 md:px-0">
-                <strong className="border border-b-0 border-[#B8B8B8] md:text-2xl text-sm md:h-[80px] h-[50px] flex justify-center items-center flex-1 px-1 whitespace-nowrap">Security</strong>
-                <strong className="md:text-2xl text-sm md:h-[80px] h-[50px] flex justify-center items-center flex-1 px-1 whitespace-nowrap">No Hidden Fees</strong>
-                <strong className="md:text-2xl text-sm md:h-[80px] h-[50px] flex justify-center items-center flex-1 px-1 whitespace-nowrap">Speed</strong>
-              </div>
-              <img src={Images.highlights.src} alt="" className="md:hidden block max-h-[200px] w-full object-cover object-center h-full" />
-              <div className="p-6 md:border border-[#B8B8B8]">
-                <p className="leading-9">{"To protect our clients' financial transactions, we use strong and advanced security measures at every stage of the currency conversion procedure. Our cutting-edge solutions shield critical data using cutting-edge encryption technology, guaranteeing that it stays private and unreadable by other parties. Furthermore, our qualified staff is educated to follow stringent security guidelines, ensuring the integrity of every transaction. Our steadfast focus to upholding the highest security standards highlights our commitment to providing a safe and secure environment for all currency exchange transactions at our Toronto and North Vancouver branches. We place a high priority on the trust and confidence of our clients."}
-                </p>
-                <div className="flex flex-col gap-4 pb-10 pt-4 items-start">
-                  <div className="flex items-center gap-2">
+            <p className="px-5 md:px-0 text-lg">Our tailored services cater to your financial needs, offering innovative solutions for secure and efficient currency exchanges. Whether you're sending money abroad or managing international transactions, we ensure a smooth process that prioritizes your convenience and peace of mind.
+To protect our clients' financial transactions, we employ advanced security measures at every stage of the currency exchange process. Our state-of-the-art encryption technology ensures your data remains private and secure, safeguarding it from unauthorized access. Additionally, our highly trained staff adheres to strict security guidelines to guarantee the integrity of every transaction.
+We are committed to maintaining the highest security standards and providing a seamless, secure environment for all currency exchange services at our Toronto and North Vancouver locations. Your trust and confidence remain our top priorities.
+</p>
+  <div className="flex items-center gap-2">
                     <img src={Images.checkGreen.src} className="h-5" alt="" />
                     <span>Great Exchange rate</span>
                   </div>
@@ -197,8 +186,6 @@ export default function Home() {
                     <span>No Hidden Fees</span>
                   </div>
                 </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
