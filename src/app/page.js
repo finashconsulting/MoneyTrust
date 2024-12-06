@@ -53,7 +53,7 @@ export default function Home() {
         <div className="flex-1 lg:w-1/2">
           <h1 className="text-xl font-bold  md:text-4xl">
             Popular Countries Our Customers Send Money
-          </h1><br>
+          </h1>
           <p className="md:text-xl opacity-80">Our customers trust us to transfer money quickly and securely to their loved ones and businesses in top destinations worldwide, including Hong Kong, Canada, China, and the USA. No matter where you're sending money, we’ve got you covered.</p>
         </div>
         <div className="flex-1 lg:w-1/2">
@@ -95,9 +95,9 @@ export default function Home() {
       <section className="px-5 md:px-20 container mx-auto flex pb-3 lg:flex-row flex-col md:gap-5 md:mt-24">
         <img src={Images.chose.src} className=" rounded-lg lg:w-1/2"  alt="" />
         <div className="lg:pl-28">
-          <h1 className="md:text-4xl text-2xl font-bold flex items-center">Why Why Choose?</h1>
+          <h1 className="md:text-4xl text-2xl font-bold flex items-center">Why Choose Us?</h1>
           <p className="text-lg pt-4">
-            {"When it comes to your currency exchange needs in North York, Toronto, look no further than us. We understand the value of accurate and speedy transactions at our exchange office, and our committed team is always available to help you with a degree of responsiveness that guarantees your peace of mind. Select us for your currency exchange needs, and discover why we're the go-to option in North York—our combination of security, dependability, and quickness."}
+            {"Conveniently located in the heart of downtown North York, we offer fast, reliable, and accurate currency exchange services with no hidden fees. Our experienced team ensures seamless transactions, providing peace of mind for all your money exchange needs. Select us for your currency exchange needs, and discover why we're the go-to option in North York—our combination of security, dependability, and quickness."}
           </p>
           <section className="md:mt-8 grid grid-cols-1 mt-2 md:grid-cols-2 gap-3">
             {chooseArray.map((item, i) => (
