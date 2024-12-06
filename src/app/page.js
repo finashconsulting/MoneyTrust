@@ -10,8 +10,8 @@ import { PiStarThin } from "react-icons/pi";
 export default function Home() {
 
   const workArray = [
-    { img: Images.progress.src, heading: "Get The Exchange Rate", desc: "Call our office or simply walk-in to know the latest exchange rate." },
-    { img: Images.chart.src, heading: "Confirm The Transfer", desc: "Confirm the exchange rate and the service fee and pay the equivalent money to our office cashier. Also provide the destinaion account/contact information." },
+    { img: Images.progress.src, heading: "Get The Exchange Rate", desc: "Find the best exchange rates online, call us, or visit our office. We guarantee transparent transactions with no hidden service fees." },
+    { img: Images.chart.src, heading: "Confirm The Transfer", desc: "Securely lock in your exchange rate. For cash payments, walk into our office. For E-Transfers, give us a call or visit us in person. Share the recipient’s details, and we’ll take care of the rest." },
     { img: Images.success.src, heading: "Track your transfer", desc: "We process your money transfer as soon as possible and will update you when the money is delivered or transferred to the destination account/person." }
   ];
 
@@ -54,7 +54,7 @@ export default function Home() {
           <h1 className="text-xl font-bold  md:text-4xl">
             Popular Countries Our Customers Send Money
           </h1>
-          <p className="md:text-xl opacity-80">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel cursus eros, a finibus nibh. Donec porttitor ligula nec </p>
+          <p className="md:text-xl opacity-80">Our customers trust us to transfer money quickly and securely to their loved ones and businesses in top destinations worldwide, including Hong Kong, Canada, China, and the USA. No matter where you're sending money, we’ve got you covered.</p>
         </div>
         <div className="flex-1 lg:w-1/2">
           <FlagSlider />
@@ -65,7 +65,7 @@ export default function Home() {
           How Does Money Transfer Work?
         </h1>
         <div className="flex justify-center">
-          <p className="md:text-lg mt-2 text-center max-w-[600px]">Mobile banking differs from mobile payments, which involves the use of a mobile device.</p>
+          <p className="md:text-lg mt-2 text-center max-w-[600px]">Transferring money with us is simple and secure. Start your transfer now and experience the difference!</p>
         </div>
 
         <div className="hidden lg:grid lg:grid-cols-3 flex-col items-center md:mt-10 justify-between max-w-[1225px] w-full relative">
