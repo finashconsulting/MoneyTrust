@@ -79,12 +79,7 @@ const page = () => {
                                 <div className="mb-4">{service.icon}</div>
                                 <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
                                 <p className="text-blue1 mb-4">{service.description}</p>
-                                <a
-                                    href="#"
-                                    className="font-semibold flex items-center hover:text-blue-700"
-                                >
-                                     Learn More <AiOutlineArrowRight className="ml-2 -rotate-45" />
-                                </a>
+                                
                             </div>
                         ))}
                     </div>
