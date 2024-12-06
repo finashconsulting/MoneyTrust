@@ -169,10 +169,7 @@ export default function Home() {
           <img src={Images.highlights.src} alt="" className="md:block hidden max-h-[800px] h-full" />
           <div className="flex flex-col justify-between">
             <h1 className="px-5 md:px-0 md:text-4xl text-xl font-bold pb-5">Highlights Of Our Services</h1>
-            <p className="px-5 md:px-0 text-lg">This summer camp is designed for international students aged 10-18 with an
-              interest in AI and entrepreneurship. Participants should be eager to engage in
-              hands-on activities in Singapore and explore how AI applies to business
-              innovation.</p>
+            
             <div className="pt-8 ">
               <div className="flex px-5 md:px-0">
                 <strong className="border border-b-0 border-[#B8B8B8] md:text-2xl text-sm md:h-[80px] h-[50px] flex justify-center items-center flex-1 px-1 whitespace-nowrap">Security</strong>
