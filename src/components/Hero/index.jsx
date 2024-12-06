@@ -30,8 +30,8 @@ const Hero = () => {
                             <span className="text-[8px] md:text-sm whitespace-nowrap">Great Exchange Rate</span>
                         </div>
                     </div>
-                    <h1 className="md:text-[62px] text-[24px] font-bold">Money Trust Currency Exchange</h1>
-                    <p className="md:text-[20px] opacity-90">{"Lorem Ipsum is simply dummy text of the printing and typesetting industry."}</p>
+                    <h1 className="md:text-[62px] text-[24px] font-bold">Fast, Reliable, and Secure Currency Exchange</h1>
+                    <p className="md:text-[20px] opacity-90">{"Experience seamless money transfers at great exchange rates with no hidden fees. Whether you’re sending funds internationally or buying gold, our 24/7 service ensures your money moves when you need it. Trust us for hassle-free, transparent, and efficient currency exchange solutions."}</p>
                     <p className="md:text-[20px] opacity-90 !m-0">{"Lorem Ipsum has been the industry's standard dummy text."}</p>
                     <div className="flex space-x-4 mt-6">
                         <button className="bg-blue1 text-white flex justify-center items-center md:gap-3 gap-2 whitespace-nowrap text-sm md:text-lg md:px-6 px-3 py-3 rounded-full">Transfer Money
