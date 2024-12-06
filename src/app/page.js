@@ -10,8 +10,8 @@ import { PiStarThin } from "react-icons/pi";
 export default function Home() {
 
   const workArray = [
-    { img: Images.progress.src, heading: "Get The Exchange Rate", desc: "Find the best exchange rates online, call us, or visit our office. We guarantee transparent transactions with no hidden service fees." },
-    { img: Images.chart.src, heading: "Confirm The Transfer", desc: "Securely lock in your exchange rate. For cash payments, walk into our office. For E-Transfers, give us a call or visit us in person. Share the recipient’s details, and we’ll take care of the rest." },
+    { img: Images.progress.src, heading: "Get The Exchange Rate", desc: "Call our office or simply walk-in to know the latest exchange rate." },
+    { img: Images.chart.src, heading: "Confirm The Transfer", desc: "Confirm the exchange rate and the service fee and pay the equivalent money to our office cashier. Also provide the destinaion account/contact information." },
     { img: Images.success.src, heading: "Track your transfer", desc: "We process your money transfer as soon as possible and will update you when the money is delivered or transferred to the destination account/person." }
   ];
 
@@ -54,7 +54,7 @@ export default function Home() {
           <h1 className="text-xl font-bold  md:text-4xl">
             Popular Countries Our Customers Send Money
           </h1>
-          <p className="md:text-xl opacity-80">Our customers trust us to transfer money quickly and securely to their loved ones and businesses in top destinations worldwide, including Hong Kong, Canada, China, and the USA. No matter where you're sending money, we’ve got you covered.</p>
+          <p className="md:text-xl opacity-80">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel cursus eros, a finibus nibh. Donec porttitor ligula nec </p>
         </div>
         <div className="flex-1 lg:w-1/2">
           <FlagSlider />
@@ -65,7 +65,7 @@ export default function Home() {
           How Does Money Transfer Work?
         </h1>
         <div className="flex justify-center">
-          <p className="md:text-lg mt-2 text-center max-w-[600px]">Transferring money with us is simple and secure. Start your transfer now and experience the difference!</p>
+          <p className="md:text-lg mt-2 text-center max-w-[600px]">Mobile banking differs from mobile payments, which involves the use of a mobile device.</p>
         </div>
 
         <div className="hidden lg:grid lg:grid-cols-3 flex-col items-center md:mt-10 justify-between max-w-[1225px] w-full relative">
@@ -120,7 +120,7 @@ export default function Home() {
               <p className="text-[#94C99D] sm:hidden text-lg">Core Services</p>
               Our Services At A Glance</h1>
             <div className="flex justify-end flex-col items-end gap-2">
-              <p className="sm:text-end text-start max-w-[500px]">Effortlessly send, receive, and manage your money transfers with confidence using Money Trust's reliable and secure services.</p>
+              <p className="sm:text-end text-start max-w-[500px]">Quickly and easily send, receive and request money online with Money Trust.</p>
               <button className="bg-[#94C99D] text-white hidden md:flex justify-center items-center md:gap-3 gap-2 whitespace-nowrap text-sm md:text-lg md:px-6 px-3 py-3 rounded-full">View More
                 <img src={Images.plus.src} className="h-5" alt="ico" />
               </button>
@@ -169,11 +169,22 @@ export default function Home() {
           <img src={Images.highlights.src} alt="" className="md:block hidden max-h-[800px] h-full" />
           <div className="flex flex-col justify-between">
             <h1 className="px-5 md:px-0 md:text-4xl text-xl font-bold pb-5">Highlights Of Our Services</h1>
-            <p className="px-5 md:px-0 text-lg">Our tailored services cater to your financial needs, offering innovative solutions for secure and efficient currency exchanges. Whether you're sending money abroad or managing international transactions, we ensure a smooth process that prioritizes your convenience and peace of mind.
-To protect our clients' financial transactions, we employ advanced security measures at every stage of the currency exchange process. Our state-of-the-art encryption technology ensures your data remains private and secure, safeguarding it from unauthorized access. Additionally, our highly trained staff adheres to strict security guidelines to guarantee the integrity of every transaction.
-We are committed to maintaining the highest security standards and providing a seamless, secure environment for all currency exchange services at our Toronto and North Vancouver locations. Your trust and confidence remain our top priorities.
-</p>
-  <div className="flex items-center gap-2">
+            <p className="px-5 md:px-0 text-lg">This summer camp is designed for international students aged 10-18 with an
+              interest in AI and entrepreneurship. Participants should be eager to engage in
+              hands-on activities in Singapore and explore how AI applies to business
+              innovation.</p>
+            <div className="pt-8 ">
+              <div className="flex px-5 md:px-0">
+                <strong className="border border-b-0 border-[#B8B8B8] md:text-2xl text-sm md:h-[80px] h-[50px] flex justify-center items-center flex-1 px-1 whitespace-nowrap">Security</strong>
+                <strong className="md:text-2xl text-sm md:h-[80px] h-[50px] flex justify-center items-center flex-1 px-1 whitespace-nowrap">No Hidden Fees</strong>
+                <strong className="md:text-2xl text-sm md:h-[80px] h-[50px] flex justify-center items-center flex-1 px-1 whitespace-nowrap">Speed</strong>
+              </div>
+              <img src={Images.highlights.src} alt="" className="md:hidden block max-h-[200px] w-full object-cover object-center h-full" />
+              <div className="p-6 md:border border-[#B8B8B8]">
+                <p className="leading-9">{"To protect our clients' financial transactions, we use strong and advanced security measures at every stage of the currency conversion procedure. Our cutting-edge solutions shield critical data using cutting-edge encryption technology, guaranteeing that it stays private and unreadable by other parties. Furthermore, our qualified staff is educated to follow stringent security guidelines, ensuring the integrity of every transaction. Our steadfast focus to upholding the highest security standards highlights our commitment to providing a safe and secure environment for all currency exchange transactions at our Toronto and North Vancouver branches. We place a high priority on the trust and confidence of our clients."}
+                </p>
+                <div className="flex flex-col gap-4 pb-10 pt-4 items-start">
+                  <div className="flex items-center gap-2">
                     <img src={Images.checkGreen.src} className="h-5" alt="" />
                     <span>Great Exchange rate</span>
                   </div>
@@ -186,6 +197,8 @@ We are committed to maintaining the highest security standards and providing a s
                     <span>No Hidden Fees</span>
                   </div>
                 </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
