@@ -34,27 +34,9 @@ const Footer = () => {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 flex-1">
                     {/* Links Columns */}
-                    <div className="col-span-1">
-                        <h3 className="font-bold my-4">Column One</h3>
-                        <ul className="space-y-2 text-sm">
-                            <li><a href="#" className="hover:underline">Link One</a></li>
-                            <li><a href="#" className="hover:underline">Link Two</a></li>
-                            <li><a href="#" className="hover:underline">Link Three</a></li>
-                            <li><a href="#" className="hover:underline">Link Four</a></li>
-                            <li><a href="#" className="hover:underline">Link Five</a></li>
-                        </ul>
-                    </div>
 
-                    <div className="col-span-1">
-                        <h3 className="font-bold my-4">Column Two</h3>
-                        <ul className="space-y-2 text-sm">
-                            <li><a href="#" className="hover:underline">Link Six</a></li>
-                            <li><a href="#" className="hover:underline">Link Seven</a></li>
-                            <li><a href="#" className="hover:underline">Link Eight</a></li>
-                            <li><a href="#" className="hover:underline">Link Nine</a></li>
-                            <li><a href="#" className="hover:underline">Link Ten</a></li>
-                        </ul>
-                    </div>
+
+
 
                     {/* Social Media Links */}
                     <div className="col-span-1">
@@ -84,7 +66,7 @@ const Footer = () => {
 
             {/* Bottom Section */}
             <div className="max-w-7xl mx-auto px-4 mt-10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-                <p>© 2023 Relume. All rights reserved.</p>
+                <p>© 2024 Money Trust Inc. All rights reserved.</p>
                 <div className="flex mt-4 space-x-3 md:mt-0">
                     <a href="#" className="underline sm:text-lg whitespace-nowrap text-[12px]">Privacy Policy</a>
                     <a href="#" className="underline sm:text-lg whitespace-nowrap text-[12px]">Terms of Service</a>
