@@ -1,32 +1,36 @@
-"use client"
-import React, { useState, useEffect } from 'react';
-import emailjs from 'emailjs-com';
+"use client";
+import React, { useState, useEffect } from "react";
+import emailjs from "emailjs-com";
 
-const OrderFormModal = ({ isModalOpen, setIsModalOpen, currentOrderDetails }) => {
+const OrderFormModal = ({
+  isModalOpen,
+  setIsModalOpen,
+  currentOrderDetails,
+}) => {
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    deliveryMethod: 'pickup',
-    pickupLocation: '',
-    address: '',
-    city: '',
-    province: '',
-    postalCode: '',
-    totalAmount: '',
+    fullName: "",
+    email: "",
+    phone: "",
+    deliveryMethod: "pickup",
+    pickupLocation: "",
+    address: "",
+    city: "",
+    province: "",
+    postalCode: "",
+    totalAmount: "",
     streetAddress: "",
     city: "",
-    province: ""
+    province: "",
   });
 
   useEffect(() => {
-    emailjs.init('WuuAQ1FbvTmeLyXQM'); // Replace with your EmailJS public key
+    emailjs.init("WuuAQ1FbvTmeLyXQM"); // Replace with your EmailJS public key
   }, []);
 
   // Update the form when currentOrderDetails change
   useEffect(() => {
     // console.log('first',
-    //   `${currentOrderDetails?.sendAmount?.toLocaleString('en-US', { 
+    //   `${currentOrderDetails?.sendAmount?.toLocaleString('en-US', {
     //       style: 'currency',
     //       currency: currentOrderDetails?.sendCurrency
     //     })}`
@@ -57,41 +61,54 @@ const OrderFormModal = ({ isModalOpen, setIsModalOpen, currentOrderDetails }) =>
       receiveAmount: currentOrderDetails.receiveAmount,
       receiveCurrency: currentOrderDetails.receiveCurrency,
       rate: currentOrderDetails.rate,
-      deliveryFee: formData.deliveryMethod === 'delivery' ? '$30.00' : '$0.00',
+      deliveryFee: formData.deliveryMethod === "delivery" ? "$30.00" : "$0.00",
     };
 
     // Send email via emailjs
-    emailjs.send('service_285pths', 'template_236tarq', {
-      to_email: "info@moneytrust.ca",
-      cc_email: orderDetails.email,
-      customer_name: orderDetails.fullName,
-      customer_email: orderDetails.email,
-      phone: orderDetails.phone,
-      send_amount: `${orderDetails.sendAmount} ${orderDetails.sendCurrency}`,
-      receive_amount: `${orderDetails.receiveAmount} ${orderDetails.receiveCurrency}`,
-      rate: orderDetails.rate,
-      delivery_method: orderDetails.deliveryMethod === 'delivery' ? 'Home Delivery ($30)' : 'Office Pickup (Free)',
-      pickup_location: orderDetails.pickupLocation,
-      preferred_date: formData.preferredDate,
-      delivery_fee: orderDetails.deliveryFee,
-      total_amount: `${(orderDetails.sendAmount + totalAmount).toLocaleString('en-US', {
-        style: 'currency',
-        currency: currentOrderDetails.sendCurrency
-      })}`, // Ensure total includes the delivery fee
-      street_address: formData.streetAddress, // Include street address
-      city: formData.city, // Include city
-      province: formData.province, // Include province
-      postal_code: formData.postalCode, // Include postal code
-      order_type: 'Currency Exchange',
-    }, 'WuuAQ1FbvTmeLyXQM')
-      .then(response => {
-        console.log('Success:', response);
-        alert('Order submitted successfully! Check your email for confirmation.');
+    emailjs
+      .send(
+        "service_285pths",
+        "template_236tarq",
+        {
+          to_email: "info@moneytrust.ca",
+          cc_email: orderDetails.email,
+          customer_name: orderDetails.fullName,
+          customer_email: orderDetails.email,
+          phone: orderDetails.phone,
+          send_amount: `${orderDetails.sendAmount} ${orderDetails.sendCurrency}`,
+          receive_amount: `${orderDetails.receiveAmount} ${orderDetails.receiveCurrency}`,
+          rate: orderDetails.rate,
+          delivery_method:
+            orderDetails.deliveryMethod === "delivery"
+              ? "Home Delivery ($30)"
+              : "Office Pickup (Free)",
+          pickup_location: orderDetails.pickupLocation,
+          preferred_date: formData.preferredDate,
+          delivery_fee: orderDetails.deliveryFee,
+          total_amount: `${(
+            orderDetails.sendAmount + totalAmount
+          ).toLocaleString("en-US", {
+            style: "currency",
+            currency: currentOrderDetails.sendCurrency,
+          })}`, // Ensure total includes the delivery fee
+          street_address: formData.streetAddress, // Include street address
+          city: formData.city, // Include city
+          province: formData.province, // Include province
+          postal_code: formData.postalCode, // Include postal code
+          order_type: "Currency Exchange",
+        },
+        "WuuAQ1FbvTmeLyXQM"
+      )
+      .then((response) => {
+        console.log("Success:", response);
+        alert(
+          "Order submitted successfully! Check your email for confirmation."
+        );
         setIsModalOpen(false); // Close modal on success
       })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('Error submitting order. Please try again.');
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("Error submitting order. Please try again.");
       });
   };
 
@@ -99,7 +116,7 @@ const OrderFormModal = ({ isModalOpen, setIsModalOpen, currentOrderDetails }) =>
     setIsModalOpen(false); // Close the modal when back is clicked
   };
 
-  const totalAmount = formData.deliveryMethod === 'delivery' ? 30 : 0
+  const totalAmount = formData.deliveryMethod === "delivery" ? 30 : 0;
   return (
     <>
       {isModalOpen && (
@@ -109,8 +126,19 @@ const OrderFormModal = ({ isModalOpen, setIsModalOpen, currentOrderDetails }) =>
               <div className="order-form">
                 {/* Back Button */}
                 <div className="back-button" onClick={handleBack}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path d="M19 12H5M12 19l-7-7 7-7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M19 12H5M12 19l-7-7 7-7"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                   Back
                 </div>
@@ -121,21 +149,35 @@ const OrderFormModal = ({ isModalOpen, setIsModalOpen, currentOrderDetails }) =>
                   <div className="summary-details">
                     <div className="summary-row">
                       <span>You Send:</span>
-                      <span>{currentOrderDetails.sendAmount.toLocaleString('en-US', {
-                        style: 'currency',
-                        currency: currentOrderDetails.sendCurrency
-                      })}</span>
+                      <span>
+                        {currentOrderDetails.sendAmount.toLocaleString(
+                          "en-US",
+                          {
+                            style: "currency",
+                            currency: currentOrderDetails.sendCurrency,
+                          }
+                        )}
+                      </span>
                     </div>
                     <div className="summary-row">
                       <span>You Receive:</span>
-                      <span>{currentOrderDetails.receiveAmount.toLocaleString('en-US', {
-                        style: 'currency',
-                        currency: currentOrderDetails.receiveCurrency
-                      })}</span>
+                      <span>
+                        {currentOrderDetails.receiveAmount.toLocaleString(
+                          "en-US",
+                          {
+                            style: "currency",
+                            currency: currentOrderDetails.receiveCurrency,
+                          }
+                        )}
+                      </span>
                     </div>
                     <div className="summary-row">
                       <span>Exchange Rate:</span>
-                      <span>1 {currentOrderDetails.sendCurrency} = {currentOrderDetails.rate.toFixed(4)} {currentOrderDetails.receiveCurrency}</span>
+                      <span>
+                        1 {currentOrderDetails.sendCurrency} ={" "}
+                        {currentOrderDetails.rate.toFixed(4)}{" "}
+                        {currentOrderDetails.receiveCurrency}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -202,7 +244,6 @@ const OrderFormModal = ({ isModalOpen, setIsModalOpen, currentOrderDetails }) =>
                         />
                       </div>
                       <div className="form-group">
-
                         <label htmlfor="province">Province*</label>
                         <select
                           name="province"
@@ -230,7 +271,9 @@ const OrderFormModal = ({ isModalOpen, setIsModalOpen, currentOrderDetails }) =>
                           name="postalCode"
                           value={formData.postalCode}
                           onChange={handleChange}
-                          pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" required placeholder="A1A 1A1"
+                          pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]"
+                          required
+                          placeholder="A1A 1A1"
                         />
                       </div>
                     </div>
@@ -244,13 +287,17 @@ const OrderFormModal = ({ isModalOpen, setIsModalOpen, currentOrderDetails }) =>
                           type="radio"
                           name="deliveryMethod"
                           value="pickup"
-                          checked={formData.deliveryMethod === 'pickup'}
+                          checked={formData.deliveryMethod === "pickup"}
                           onChange={handleChange}
                           required
                         />
                         <div>
-                          <span className="option-title">Office Pickup (Free)</span>
-                          <span className="option-description">Pick up from our office</span>
+                          <span className="option-title">
+                            Office Pickup (Free)
+                          </span>
+                          <span className="option-description">
+                            Pick up from our office
+                          </span>
                         </div>
                       </label>
                       <label className="delivery-option">
@@ -258,18 +305,30 @@ const OrderFormModal = ({ isModalOpen, setIsModalOpen, currentOrderDetails }) =>
                           type="radio"
                           name="deliveryMethod"
                           value="delivery"
-                          checked={formData.deliveryMethod === 'delivery'}
+                          checked={formData.deliveryMethod === "delivery"}
                           onChange={handleChange}
                           required
                         />
                         <div>
-                          <span className="option-title">Home Delivery ($30)</span>
-                          <span className="option-description">Secure delivery via Canada Post</span>
+                          <span className="option-title">
+                            Home Delivery ($30)
+                          </span>
+                          <span className="option-description">
+                            Secure delivery via Canada Post
+                          </span>
                         </div>
                       </label>
                     </div>
 
-                    <div id="pickupLocationSection" style={{ display: formData.deliveryMethod === 'pickup' ? 'block' : 'none' }}>
+                    <div
+                      id="pickupLocationSection"
+                      style={{
+                        display:
+                          formData.deliveryMethod === "pickup"
+                            ? "block"
+                            : "none",
+                      }}
+                    >
                       <select
                         name="pickupLocation"
                         required
@@ -277,22 +336,35 @@ const OrderFormModal = ({ isModalOpen, setIsModalOpen, currentOrderDetails }) =>
                         onChange={handleChange}
                       >
                         <option value="">Select Pickup Location</option>
-                        <option value="Toronto">Toronto: Dynasty Court, 5460 Yonge St Shop 105, North York, ON M2N 6K7</option>
-                        <option value="Vancouver">Vancouver: 146 West 3rd Street, North Vancouver, BC V7M 1E8</option>
+                        <option value="Toronto">
+                          Toronto: Dynasty Court, 5460 Yonge St Shop 105, North
+                          York, ON M2N 6K7
+                        </option>
+                        <option value="Vancouver">
+                          Vancouver: 146 West 3rd Street, North Vancouver, BC
+                          V7M 1E8
+                        </option>
                       </select>
                     </div>
                     <div className="form-group mt-4">
                       {/* <label htmlfor="preferredDate">Preferred Date*</label> */}
                       <input
-                        type="date"
+                        type={formData.preferredDate ? "date" : "text"}
                         id="preferredDate"
-                        className='cursor-pointer'
+                        className="cursor-pointer placeholder:text-black"
                         name="preferredDate"
                         required
-                        value={formData.preferredDate || ''} 
-                        onChange={handleChange} 
-                        onFocus={(e) =>  e.target.showPicker()}
-                        onClick={(e) =>  e.target.showPicker()}
+                        placeholder="Select Date"
+                        value={formData.preferredDate || ""}
+                        onChange={handleChange}
+                        onFocus={(e) => {
+                          e.target.type = "date"; // Ensure the type is set to "date" on focus
+                          e.target.showPicker(); // Open the picker programmatically
+                        }}
+                        onClick={(e) => e.target.showPicker()}
+                        onBlur={(e) => {
+                          if (!formData.preferredDate) e.target.type = "text"; // Revert to text if no date selected
+                        }}
                         onKeyDown={(e) => e.preventDefault()}
                       />
                     </div>
@@ -345,10 +417,13 @@ const OrderFormModal = ({ isModalOpen, setIsModalOpen, currentOrderDetails }) =>
                       <div className="total-row">
                         <span>Exchange Amount:</span>
                         <span id="exchangeAmount">
-                          {currentOrderDetails.sendAmount.toLocaleString('en-US', {
-                            style: 'currency',
-                            currency: currentOrderDetails.sendCurrency
-                          })}
+                          {currentOrderDetails.sendAmount.toLocaleString(
+                            "en-US",
+                            {
+                              style: "currency",
+                              currency: currentOrderDetails.sendCurrency,
+                            }
+                          )}
                         </span>
                       </div>
                       <div className="total-row" id="deliveryFeeRow">
@@ -358,17 +433,23 @@ const OrderFormModal = ({ isModalOpen, setIsModalOpen, currentOrderDetails }) =>
                       <div className="total-row total">
                         <span>Total Amount:</span>
                         <span id="totalAmount">
-                          {(currentOrderDetails.sendAmount+totalAmount).toLocaleString('en-US', {
-                            style: 'currency',
-                            currency: currentOrderDetails.sendCurrency
+                          {(
+                            currentOrderDetails.sendAmount + totalAmount
+                          ).toLocaleString("en-US", {
+                            style: "currency",
+                            currency: currentOrderDetails.sendCurrency,
                           })}
                         </span>
                       </div>
                     </div>
-
                   </div>
 
-                  <button type="submit" className="btn border-none bg-[#28c840] w-full text-white hover:opacity-90 hover:bg-[#28c840]">Confirm Order</button>
+                  <button
+                    type="submit"
+                    className="btn border-none bg-[#28c840] w-full text-white hover:opacity-90 hover:bg-[#28c840]"
+                  >
+                    Confirm Order
+                  </button>
                 </form>
               </div>
             </div>

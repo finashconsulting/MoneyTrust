@@ -70,7 +70,7 @@ const page = () => {
                         Our Services At A Glance
                     </h2>
 
-                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-8">
                         {services.map((service, index) => (
                             <div
                                 key={index}
@@ -79,12 +79,12 @@ const page = () => {
                                 <div className="mb-4">{service.icon}</div>
                                 <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
                                 <p className="text-blue1 mb-4">{service.description}</p>
-                                <a
+                                {/* <a
                                     href="#"
                                     className="font-semibold flex items-center hover:text-blue-700"
                                 >
                                      Learn More <AiOutlineArrowRight className="ml-2 -rotate-45" />
-                                </a>
+                                </a> */}
                             </div>
                         ))}
                     </div>

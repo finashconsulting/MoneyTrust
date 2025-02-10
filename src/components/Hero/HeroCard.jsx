@@ -3,7 +3,7 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const HeroCard = () => {
     return (
-        <div className="bg-white shadow-lg  flex flex-col max-w-full w-full  lg:max-w-[400px] h-full ">
+        <div className="shadow-lg  flex flex-col max-w-full w-full lg:max-w-[400px] h-full ">
             <div className="flex ">
                 <button className="bg-blue1 h-[75px] flex-1 text-white font-semibold">Account to Account</button>
                 <button className="bg-gray2 h-[75px] flex-1 text-black font-semibold">By Cash</button>

@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,7 +12,9 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
@@ -23,6 +26,22 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+.slick-dots{
+  bottom: -35px !important;
+
+}
+.slick-dots li{
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+.slick-dots li button::before{
+  width: 30px !important;
+  height: 6px !important;
+  border-radius: 6px;
+  background-color: #015180;
+  font-size: 0 !important;
+}
+ 
 input{
   background: #fff;
 }

@@ -22,6 +22,8 @@ import currency from '../../public/Images/currency.svg';
 import plan from '../../public/Images/plan.svg';
 import highlights from '../../public/Images/highlights.svg';
 import Testimonial from '../../public/Images/Testimonial.svg';
+import Testimonial1 from '../../public/Images/testimonial-user.webp.svg';
+import Testimonial2 from '../../public/Images/testimonial-user2.webp.svg';
 import user from '../../public/Images/user.svg';
 import trust1 from '../../public/Images/trust1.svg';
 import trust2 from '../../public/Images/trust2.svg';
@@ -29,6 +31,7 @@ import cover from '../../public/Images/about/cover.svg';
 import user1 from '../../public/Images/about/1.svg';
 import user2 from '../../public/Images/about/2.svg';
 import user3 from '../../public/Images/about/3.svg';
+import service from '../../public/Images/service-img.svg';
 import service1 from '../../public/Images/services/1.svg';
 import service2 from '../../public/Images/services/2.svg';
 import service3 from '../../public/Images/services/3.svg';
@@ -41,11 +44,20 @@ import service9 from '../../public/Images/services/9.svg';
 import chinaFlag from '../../public/Images/china.webp';
 import hongkongFlag from '../../public/Images/hongkong.png';
 import goldBars from '../../public/Images/goldBars.png';
+import gold1kg from '../../public/Images/gold/1-kilo.png';
+import gold1oz from '../../public/Images/gold/1 OZ.png';
+import gold12oz from '../../public/Images/gold/1.2 OZ.jpg';
+import gold14oz from '../../public/Images/gold/1-4 OZ.png';
 
 export const Images = {
     goldBars,
+    gold1kg,
+    gold1oz,
+    gold12oz,
+    gold14oz,
     hongkongFlag,
     chinaFlag,
+    service,
     service1,
     service2,
     service3,
@@ -63,6 +75,8 @@ export const Images = {
     trust2,
     user,
     Testimonial,
+    Testimonial1,
+    Testimonial2,
     highlights,
     plan,
     currency,
