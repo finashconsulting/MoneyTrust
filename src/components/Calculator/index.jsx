@@ -147,7 +147,7 @@ const Calculator = ({ setCartData = () => {} }) => {
     "CAD-NZD": 0.0582,
     "CAD-AED": 0.0768,
     "CAD-CNY": 0.0344,
-    "CAD-USD": 0.009,
+    "CAD-USD": 0.0147,
     "CAD-EUR": 0.025,
     "CAD-CHF": 0.0285,
     "CAD-AUD": 0.0384,
@@ -211,6 +211,22 @@ const Calculator = ({ setCartData = () => {} }) => {
       paddingBottom: "6px",
     }),
   };
+  
+  
+
+const handleSendCurrencyChange = (currency) => {
+  if (currency.value === receiveCurrency.value) {
+    setReceiveCurrency(sendCurrency); // Swap to the previous currency
+  }
+  setSendCurrency(currency);
+};
+
+const handleReceiveCurrencyChange = (currency) => {
+  if (currency.value === sendCurrency.value) {
+    setSendCurrency(receiveCurrency); // Swap to the previous currency
+  }
+  setReceiveCurrency(currency);
+};
 
   const products = [
     {
@@ -640,7 +656,7 @@ const Calculator = ({ setCartData = () => {} }) => {
                 styles={customStyles}
                 placeholder="Select Currency"
                 value={sendCurrency}
-                onChange={(currency) => setSendCurrency(currency)}
+                onChange={handleSendCurrencyChange}
               />
             </div>
           </div>
@@ -693,7 +709,7 @@ const Calculator = ({ setCartData = () => {} }) => {
                 styles={customStyles}
                 placeholder="Select Currency"
                 value={receiveCurrency}
-                onChange={(currency) => setReceiveCurrency(currency)}
+                onChange={handleReceiveCurrencyChange}
               />
             </div>
           </div>
